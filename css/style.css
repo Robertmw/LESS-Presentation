@@ -157,11 +157,26 @@ table {
   background: #3e423a;
 }
 .splitlayout.right-open .page-right {
+  padding: 60px;
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(0%);
   -o-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.splitlayout.right-open .page-right h3 {
+  font-size: 35px;
+  line-height: 70px;
+  font-weight: 200;
+}
+.splitlayout.right-open .page-right p {
+  line-height: 20px;
+}
+.splitlayout.right-open .page-right p + p {
+  margin-top: 30px;
 }
 /* style for landing page */
 html,
