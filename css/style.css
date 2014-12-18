@@ -124,6 +124,36 @@ table {
   border-spacing: 0;
 }
 /* colors */
+.page-left {
+  left: 0;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.splitlayout.left-open .page-left {
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+}
+.page-right {
+  right: 0;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.splitlayout.right-open .page-right {
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+}
 /* style for landing page */
 html,
 body,
@@ -135,7 +165,7 @@ body,
 }
 body {
   background: #333;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .splitlayout {
   position: relative;
@@ -143,7 +173,7 @@ body {
   min-height: 100%;
   overflow-x: hidden;
 }
-.side {
+.splitlayout .side {
   position: fixed;
   top: 0;
   width: 50%;
@@ -151,23 +181,27 @@ body {
   text-align: center;
   -webkit-backface-visibility: hidden;
   z-index: 100;
-  cursor: default;
+  cursor: pointer;
+  -webkit-transition: width 0.5s linear;
+  -moz-transition: width 0.5s linear;
+  -o-transition: width 0.5s linear;
+  transition: width 0.5s linear;
 }
-.side.side-left {
+.splitlayout .side.side-left {
   left: 0;
   background: #a4cfbe;
   color: #fff;
   outline: 1px solid #a4cfbe;
   /* avoid gap */
 }
-.side.side-right {
+.splitlayout .side.side-right {
   right: 0;
   background: #f4f7d9;
   color: #3e423a;
   outline: 1px solid #f4f7d9;
   /* avoid gap */
 }
-.intro-content {
+.splitlayout .side .intro-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -177,15 +211,15 @@ body {
   -webkit-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%);
 }
-.intro-content h1 > span {
+.splitlayout .side .intro-content h1 > span {
   display: block;
   white-space: nowrap;
 }
-.intro-content h1 > span:first-child {
+.splitlayout .side .intro-content h1 > span:first-child {
   font-size: 2em;
   font-weight: 300;
 }
-.intro-content h1 > span:nth-child(2) {
+.splitlayout .side .intro-content h1 > span:nth-child(2) {
   position: relative;
   padding: 0.8em;
   margin-top: 0.5em;
@@ -193,7 +227,7 @@ body {
   letter-spacing: 1px;
   font-size: 0.8em;
 }
-.intro-content h1 > span:nth-child(2):before {
+.splitlayout .side .intro-content h1 > span:nth-child(2):before {
   content: '';
   position: absolute;
   top: 0;
@@ -203,23 +237,52 @@ body {
   background: white;
   background: #417378;
 }
-.intro-title {
-  position: relative;
-  top: 150px;
-  font-size: 28px;
-  text-align: center;
-}
-.vlad {
-  background: url('../img/vlad.jpg');
-}
-.robert {
-  background: url('../img/robert.jpg');
-}
-.profile {
+.splitlayout .side .intro-content .profile {
   margin: 20px auto;
   width: 140px;
   height: 140px;
   border-radius: 50%;
   background-position: center;
   background-size: cover;
+}
+.splitlayout .side .intro-content .profile.vlad {
+  background-image: url('../img/vlad.jpg');
+}
+.splitlayout .side .intro-content .profile.robert {
+  background-image: url('../img/robert.jpg');
+}
+.splitlayout .side .intro-title {
+  position: relative;
+  top: 150px;
+  font-size: 28px;
+  text-align: center;
+}
+.splitlayout .page {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  min-height: 100%;
+  background-color: #000000;
+  color: #fff;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  -moz-transition: -moz-transform 0.5s linear;
+  -o-transition: -o-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear,-moz-transform 0.5s linear,-o-transform 0.5s linear,transform 0.5s linear;
+  z-index: 100;
+}
+.splitlayout.left-open .side {
+  width: 20%;
+}
+.splitlayout.left-open .side.side-left {
+  left: auto;
+  right: 0;
+  z-index: 200;
+}
+.splitlayout.right-open .side {
+  width: 20%;
+}
+.splitlayout.right-open .side.side-right {
+  right: auto;
+  left: 0;
+  z-index: 200;
 }
