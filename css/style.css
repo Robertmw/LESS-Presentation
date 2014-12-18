@@ -131,6 +131,7 @@ table {
   -o-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
+  background: #417378;
 }
 .splitlayout.left-open .page-left {
   -webkit-transform: translateX(0%);
@@ -146,6 +147,7 @@ table {
   -o-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
+  background: #3e423a;
 }
 .splitlayout.right-open .page-right {
   -webkit-transform: translateX(0%);
@@ -257,12 +259,20 @@ body {
   font-size: 28px;
   text-align: center;
 }
+.splitlayout .side .back {
+  display: none;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+}
 .splitlayout .page {
   position: absolute;
   top: 0;
   width: 80%;
   min-height: 100%;
-  background-color: #000000;
   color: #fff;
   -webkit-transition: -webkit-transform 0.5s linear;
   -moz-transition: -moz-transform 0.5s linear;
@@ -278,6 +288,9 @@ body {
   right: 0;
   z-index: 200;
 }
+.splitlayout.left-open .side.side-left .back {
+  display: block;
+}
 .splitlayout.right-open .side {
   width: 20%;
 }
@@ -285,4 +298,8 @@ body {
   right: auto;
   left: 0;
   z-index: 200;
+}
+.splitlayout.right-open .side.side-right .back {
+  display: block;
+  color: #3e423a;
 }
