@@ -1,23 +1,15 @@
-	var container = document.querySelector('#splitlayout');
-	var leftZone = document.querySelector('#left');
-	var rightZone = document.querySelector('#right');
-	var backLeft = document.querySelector(".back-left");
-	var backRight = document.querySelector(".back-right");
-window.onload = function() {
-	
-	backLeft.addEventListener('click', function() {
-		container.className = 'splitlayout';
-	});
+$(document).ready(function(){
+	var container = $('#splitlayout');
+	var leftZone = $('#left');
+	var rightZone = $('#right');
+	var backLeft = $(".back.back-left");
+	var backRight = $(".back.back-right");
 
-	backRight.addEventListener('click', function() {
-		container.className = 'splitlayout';
-	});
 
-	leftZone.addEventListener('click', function(){
-		container.className = 'splitlayout left-open';
+	leftZone.on('click', function(){
+		container.toggleClass('left-open');
 	});
-
-	rightZone.addEventListener('click', function(){
-		container.className = 'splitlayout right-open';
+	rightZone.on('click', function(){
+		container.toggleClass('right-open');
 	});
-};
+});

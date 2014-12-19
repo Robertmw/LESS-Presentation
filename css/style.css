@@ -184,24 +184,29 @@ body {
   -webkit-backface-visibility: hidden;
   z-index: 100;
   cursor: pointer;
-  -webkit-transition: width 0.5s linear;
-  -moz-transition: width 0.5s linear;
-  -o-transition: width 0.5s linear;
-  transition: width 0.5s linear;
 }
 .splitlayout .side.side-left {
-  left: 0;
+  right: 50%;
   background: #a4cfbe;
   color: #fff;
   outline: 1px solid #a4cfbe;
   /* avoid gap */
+  -webkit-transition: -webkit-transform 0.6s linear, right 0.6s linear;
+  -moz-transition: -moz-transform 0.6s linear, right 0.6s linear;
+  -o-transition: -o-transform 0.6s linear, right 0.6s linear;
+  transition: -webkit-transform 0.6s linear,-moz-transform 0.6s linear,-o-transform 0.6s linear,transform 0.6s linear, right 0.6s linear;
 }
 .splitlayout .side.side-right {
   right: 0;
+  left: 50%;
   background: #f4f7d9;
   color: #3e423a;
   outline: 1px solid #f4f7d9;
   /* avoid gap */
+  -webkit-transition: -webkit-transform 0.6s linear, left 0.6s linear;
+  -moz-transition: -moz-transform 0.6s linear, left 0.6s linear;
+  -o-transition: -o-transform 0.6s linear, left 0.6s linear;
+  transition: -webkit-transform 0.6s linear,-moz-transform 0.6s linear,-o-transform 0.6s linear,transform 0.6s linear, left 0.6s linear;
 }
 .splitlayout .side .intro-content {
   position: absolute;
@@ -261,8 +266,8 @@ body {
 }
 .splitlayout .side .back {
   display: none;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   margin: 0 auto;
   color: white;
   font-size: 40px;
@@ -274,30 +279,40 @@ body {
   width: 80%;
   min-height: 100%;
   color: #fff;
-  -webkit-transition: -webkit-transform 0.5s linear;
-  -moz-transition: -moz-transform 0.5s linear;
-  -o-transition: -o-transform 0.5s linear;
-  transition: -webkit-transform 0.5s linear,-moz-transform 0.5s linear,-o-transform 0.5s linear,transform 0.5s linear;
-  z-index: 100;
+  -webkit-transition: -webkit-transform 0.6s linear;
+  -moz-transition: -moz-transform 0.6s linear;
+  -o-transition: -o-transform 0.6s linear;
+  transition: -webkit-transform 0.6s linear,-moz-transform 0.6s linear,-o-transform 0.6s linear,transform 0.6s linear;
+  z-index: 300;
 }
-.splitlayout.left-open .side {
-  width: 20%;
+.splitlayout.left-open .side.side-right {
+  z-index: 99;
 }
 .splitlayout.left-open .side.side-left {
   left: auto;
   right: 0;
-  z-index: 200;
+  z-index: 201;
+  -webkit-transform: translateX(30%);
+  -moz-transform: translateX(30%);
+  -o-transform: translateX(30%);
+  -ms-transform: translateX(30%);
+  transform: translateX(30%);
 }
 .splitlayout.left-open .side.side-left .back {
   display: block;
 }
-.splitlayout.right-open .side {
-  width: 20%;
+.splitlayout.right-open .side.side-left {
+  z-index: 99;
 }
 .splitlayout.right-open .side.side-right {
   right: auto;
   left: 0;
   z-index: 200;
+  -webkit-transform: translateX(-30%);
+  -moz-transform: translateX(-30%);
+  -o-transform: translateX(-30%);
+  -ms-transform: translateX(-30%);
+  transform: translateX(-30%);
 }
 .splitlayout.right-open .side.side-right .back {
   display: block;
