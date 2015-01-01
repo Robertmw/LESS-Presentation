@@ -32,8 +32,30 @@
 			<div class="page page-right page-large">
 				<div class="page-inner">
 					<h3>Looping in LESS</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis vitae architecto dignissimos, ipsa necessitatibus. Consectetur quae, doloribus praesentium molestias eius inventore earum! Facere tempora, consectetur odio sequi ipsa ex ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, sapiente! Fugit magni optio sit culpa voluptate eos alias corrupti obcaecati eum commodi odio quod rem, similique cumque suscipit ipsum fugiat.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis vitae architecto dignissimos, ipsa necessitatibus. Consectetur quae, doloribus praesentium molestias eius inventore earum! Facere tempora, consectetur odio sequi ipsa ex ratione. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, sapiente! Fugit magni optio sit culpa voluptate eos alias corrupti obcaecati eum commodi odio quod rem, similique cumque suscipit ipsum fugiat.</p>
+					<blockquote>In Less a mixin can call itself. Such recursive mixins, when combined with Guard Expressions and Pattern Matching, can be used to create various iterative/loop structures.  <a href="http://lesscss.org/features/#loops-feature" target="_blank">Less Documentation</a></blockquote>
+					<h5>How it works exactly?</h5>
+					<p>Loops are generated not through an explicit loop statement but rather by recursively calling the mixin. The <span style="color: #8759B6;">.loopExample</span> expression on the last line causes the mixin loop to be started. From there the tile CSS is generated and <span style="color: #8759B6;">.loopExample</span> calls itself on the last line until the guard (@counter < @n) is FALSE.</p>
+					<br>
+					<img src="img/example1.png" alt="">
+					<br><br>
+					<p>As I said, the guard (@counter < @n) is the condition that stops the loop. You have many options to write this condition, depending on your needs. Another example would be :</p>
+					<img src="img/example2.png" alt="">
+					<br>
+					<p>In this case we don't have a general length of steps and we can specify a diferent length anytime we call the mixin.</p>
+
+					<h5>Well, what it is used for?</h5>
+					<p>You can use looping for: sprite classes, layout grid, etc. Basically, the possibilities are limited by imagination.</p>
+
+					<h3>Loop through an array</h3>
+					<p>You can also loop through a list of elements with the magic function: extract()!</p>
+					<br>
+					<img src="img/example3.png" alt="">
+
+					<h3>Nested loops</h3>
+					<p>You can also loop through a list of elements with the magic function: extract()!</p>
+					<br>
+					<img src="img/example4.png" alt="">
+
 				</div><!-- /page-inner -->
 			</div><!-- /page-right -->
 			<div class="page page-left page-fill">

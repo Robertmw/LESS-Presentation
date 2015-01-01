@@ -1,24 +1,42 @@
 .page-right{
 	right: 0;
-	.transform(translateX(100%));
+	padding: 60px;
 	background: @page-right-color;
+	.transform(translateX(100%));
+	.box-sizing(border-box);
+	h3 {
+		font-size: 35px;
+		line-height: 70px;
+		font-weight: 200;
+	}
+	h5 {
+		font-size: 22px;
+		line-height: 45px;
+		font-weight: 200;
+	}
+	blockquote {
+		padding: 10px 25px;
+		font-style: italic;
+		color: #A5A5A5;
+		a {
+			color: #fff;
+			font-weight: 600;
+			text-decoration: none;
+		}
+	}
+	p {
+		line-height: 20px;
+	}
+	p + p, p + h5 {
+		margin-top: 30px;
+	}
+	p + h3 {
+		margin-top: 60px;
+	}
 }
 
 .splitlayout.right-open{
 	.page-right{
-		padding: 60px;
 		.transform(translateX(0%));
-		.box-sizing(border-box);
-		h3 {
-			font-size: 35px;
-			line-height: 70px;
-			font-weight: 200;
-		}
-		p {
-			line-height: 20px;
-		}
-		p + p {
-			margin-top: 30px;
-		}
 	}
 }
