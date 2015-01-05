@@ -133,6 +133,13 @@ table {
   transform: translateX(-100%);
   background: #417378;
 }
+.page-left .page-inner {
+  height: 100%;
+}
+.page-left .page-inner .slide {
+  width: 100%;
+  height: 100%;
+}
 .splitlayout.left-open .page-left {
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(0%);

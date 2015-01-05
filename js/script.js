@@ -1,4 +1,9 @@
-$(document).ready(function(){
+$(document).ready(function() {
+
+	$(".page-inner").onepage_scroll({
+		sectionContainer: "section" 
+	});
+
 	var container = $('#splitlayout');
 	var leftZone = $('#left');
 	var rightZone = $('#right');
@@ -6,10 +11,10 @@ $(document).ready(function(){
 	var backRight = $(".back.back-right");
 
 
-	leftZone.on('click', function(){
+	leftZone.on('click', function() {
 		container.toggleClass('left-open');
 	});
-	rightZone.on('click', function(){
+	rightZone.on('click', function() {
 		container.toggleClass('right-open');
 	});
 });
