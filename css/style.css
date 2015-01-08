@@ -137,14 +137,49 @@ table {
   -o-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
-  background: #417378;
+  background: #272822;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .page-left .page-inner {
-  height: 100%;
+  height: 100vh;
 }
 .page-left .page-inner .slide {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  padding: 50px;
+}
+.page-left .page-inner .slide .title {
+  font-size: 42px;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 0 30px 0;
+}
+.page-left .page-inner .slide .feature {
+  font-size: 30px;
+  margin: 0 0 20px 0;
+  clear: both;
+}
+.page-left .page-inner .slide .description {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+}
+.page-left .page-inner .slide img {
+  width: 50%;
+  float: left;
+  margin: 0 0 20px 0;
+}
+.page-left .page-inner .slide.slide-1 .about {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0 0 20px 0;
+}
+.page-left .page-inner .slide.slide-1 .example {
+  font-size: 18px;
+  margin: 0 0 15px 0;
 }
 .splitlayout.left-open .page-left {
   -webkit-transform: translateX(0%);
@@ -191,6 +226,11 @@ table {
 >>>>>>> fullpage.js added
 }
 /* style for landing page */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 html,
 body,
 .container {
