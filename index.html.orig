@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Mixins and looping in LESS</title>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div id="splitlayout" class="splitlayout">
+			<div class="intro">
+				<div id="left" class="side side-left">
+					<h3 class="intro-title">Mixins in LESS</h3>
+					<div class="intro-content">
+						<div class="profile vlad"></div>
+						<h1><span>Vlad Bicu</span><span>Front-End Developer</span></h1>
+					</div>
+					<div class="back back-left">&#65515;</div>
+				</div>
+				<div id="right" class="side side-right">
+					<h3 class="intro-title">How to loop in LESS</h3>
+					<div class="intro-content">
+						<div class="profile robert"></div>
+						<h1><span>Robert Pamfile</span><span>Front-End Developer</span></h1>
+					</div>
+					<div class="back back-right">&#65513;</div>
+				</div>
+			</div><!-- /intro -->
+			<div class="page page-right page-large">
+				<div class="page-inner">
+<<<<<<< HEAD
+					<h3>Looping in LESS</h3>
+					<blockquote>In Less a mixin can call itself. Such recursive mixins, when combined with Guard Expressions and Pattern Matching, can be used to create various iterative/loop structures.  <a href="http://lesscss.org/features/#loops-feature" target="_blank">Less Documentation</a></blockquote>
+					<h5>How it works exactly?</h5>
+					<p>Loops are generated not through an explicit loop statement but rather by recursively calling the mixin. The <span style="color: #8759B6;">.loopExample</span> expression on the last line causes the mixin loop to be started. From there the tile CSS is generated and <span style="color: #8759B6;">.loopExample</span> calls itself on the last line until the guard (@counter < @n) is FALSE.</p>
+					<br>
+					<img src="img/example1.png" alt="">
+					<br><br>
+					<p>As I said, the guard (@counter < @n) is the condition that stops the loop. You have many options to write this condition, depending on your needs. Another example would be :</p>
+					<img src="img/example2.png" alt="">
+					<br>
+					<p>In this case we don't have a general length of steps and we can specify a diferent length anytime we call the mixin.</p>
+
+					<h5>Well, what it is used for?</h5>
+					<p>You can use looping for: sprite classes, layout grid, etc. Basically, the possibilities are limited by imagination.</p>
+
+					<h3>Loop through an array</h3>
+					<p>You can also loop through a list of elements with the magic function: extract()!</p>
+					<br>
+					<img src="img/example3.png" alt="">
+
+					<h3>Nested loops</h3>
+					<p>You can also loop through a list of elements with the magic function: extract()!</p>
+					<br>
+					<img src="img/example4.png" alt="">
+=======
+>>>>>>> mixins
+
+				</div><!-- /page-inner -->
+			</div><!-- /page-right -->
+			<div class="page page-left page-fill">
+				<div class="page-inner">
+					<!-- left part - mixins -->
+					<section class="slide slide-1">
+						<p class="title">What its {less}</p>
+						<p class="about">LESS is a superset of CSS. LESS adds much needed dynamic properties to CSS. It introduces variables, nesting,operations, function-like elements. It will make your life hassle free by enabling you to write stylesheets with a modular mindset.</p>
+						<p class="example">A little example</p>
+						<img class="ex-less" src="img/ex1-less.png">
+						<img class="ex-css" src="img/ex1-css.png">
+					</section>
+					<section class="slide slide-2">
+						<p class="title">Features</p>
+						<!-- variables -->
+						<p class="feature">Variables</p>
+						<p class="description">Variables in LESS work exactly like they do in Javascript or most other programming languages. You can use them to store a value and then use the variable instead of the value itself whenever you need it.</p>
+						<img src="img/variabile-less.png">
+						<img src="img/variabile-css.png">
+						<!-- nesting -->
+						<p class="feature">Nesting</p>
+						<p class="description">In LESS we can nest CSS rules which gives a shorter and more logical version of our stylesheet.</p>
+						<img src="img/nesting-less.png">
+						<img src="img/nesting-css.png">
+					</section>
+					<section class="slide slide-3">
+						<!-- operations -->
+						<p class="feature">Operations</p>
+						<p class="description">Operations can be multiplication, division, addition and subtraction. </p>
+						<img src="img/operations-less.png">
+						<img src="img/operations-css.png">
+						<!-- color -->
+						<p class="feature">Color management</p>
+						<p class="description">In LESS we can nest CSS rules which gives a shorter and more logical version of our stylesheet.</p>
+						<img src="img/color-less.png">
+						<img src="img/color-css.png">
+					</section>
+					<section class="slide slide-4">
+						<!-- Mixins -->
+						<p class="feature">Mixins</p>
+						<p class="description">In LESS we can nest CSS rules which gives a shorter and more logical version of our stylesheet.</p>
+						<img src="img/color-less.png">
+						<img src="img/color-css.png">
+					</section>
+				</div><!-- /page-inner -->
+			</div><!-- /page-left -->
+		</div><!-- /splitlayout -->
+	</div><!-- /container -->
+	<!-- script zone -->
+	
+	<script src="js/jquery.fullPage.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.content {
+  display: block;
+  width: 200px;
+}
+.content .title {
+  font-size: 26px;
+  line-height: 30px;
+}
+.content .box {
+  width: 50%;
+  height: 50px;
+}
+.content .box .background {
+  background-size: cover;
+}
+.content .box:after {
+  content: '';
+  position: absolute;
+}

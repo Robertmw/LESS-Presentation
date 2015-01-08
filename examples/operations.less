@@ -1,0 +1,12 @@
+
+@unit-1: 10px;
+@unit-2: 20px;
+.container{
+	width: @unit-1 * 25;
+	margin: @unit-2 * 2;
+	padding: @unit-1 + @unit-2;
+
+	border: @unit-2 / @unit-1 solid #000;
+
+	font-size: @unit-2 - @unit-1;
+}

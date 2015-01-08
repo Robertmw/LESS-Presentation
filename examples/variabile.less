@@ -1,0 +1,13 @@
+
+@border-color: #333333;
+
+@height: 20px;
+@width: 70px;
+
+.button{
+	@unit: 1px;
+	width: @width;
+	height: @height;
+	border: @unit solid @border-color;
+	padding: @unit * 5;
+}

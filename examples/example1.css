@@ -1,0 +1,7 @@
+.box {
+  color: #262a21;
+  border-color: #808080;
+}
+.box div {
+  background-image: linear-gradient(#262823, #333333);
+}

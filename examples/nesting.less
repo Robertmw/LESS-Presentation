@@ -1,0 +1,20 @@
+
+.content{
+	display: block;
+	width: 200px;
+	.title{
+		font-size: 26px;
+		line-height: 30px;
+	}
+	.box{
+		width: 50%;
+		height: 50px;
+		.background{
+			background-size: cover; 
+		}
+		&:after{
+			content: '';
+			position: absolute;
+		}
+	}
+}

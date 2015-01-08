@@ -1,0 +1,9 @@
+button{
+	background-color: #ffffff - #333333;
+	border: 2px solid #f4f4f4 + #ff0000;
+	//color functions lighten(), darken(), saturate(), desaturate()
+	&:hover{
+		background-color: darken(#ffffff + #333333, 5%);
+		border: 4px solid lighten(#f4f4f4 - #ff0000, 10%);
+	}
+}

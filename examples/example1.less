@@ -1,0 +1,14 @@
+@culoare-1: #262823;
+@culoare-2: #333333;
+
+.gradient(@c1, @c2){
+	background-image: linear-gradient(@c1, @c2);
+}
+
+.box {
+	color: saturate(@culoare-1, 5%);
+	border-color: lighten(@culoare-2, 30%);
+	div { 
+		.gradient(@culoare-1, @culoare-2);
+	}
+}
