@@ -1,0 +1,12 @@
+/* colors */
+
+@left-color: #A4CFBE;
+@right-color: #F4F7D9;
+@dark-green: #3E423A;
+<<<<<<< HEAD
+@page-left-color: #272822;
+@page-right-color: @dark-green;
+=======
+@page-left-color: #417378;
+@page-right-color: #1a1a1a;
+>>>>>>> v1

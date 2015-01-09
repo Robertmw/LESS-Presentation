@@ -1,0 +1,61 @@
+@barColor: tomato;
+@overlayColor: #fffde8;
+@backColor: #2f3439;
+
+body {
+	padding: 30px 0;
+	background-color: @backColor;
+}
+
+.wrap {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.progress-radial {
+	float: left;
+	position: relative;
+
+	width: 100px;
+	height: 100px;
+	margin-right: 30px;
+	border-radius: 50%;
+	border: 2px solid @backColor;
+
+	background-color: @barColor;
+
+	.overlay {
+		position: absolute;
+
+		width: 60px;
+		height: 60px;
+		margin: 20px 0 0 20px;
+		border-radius: 50%;
+
+		background-color: @overlayColor;
+
+		font-size: 16px;
+		line-height: 60px;
+		text-align: center;
+	}
+	
+}
+
+@step: 1;
+@loops: 100 / @step;
+@increment: 360 / @loops;
+@half: round(@loops / 2);
+
+.loop(100);
+
+.loop(@loops, @index: 1) when (@index < @loops) {
+	.progress-@{index} when (@index < @half) {
+		@nextdeg: 90deg + (@increment * @index);
+		background-image: linear-gradient(90deg, @backColor 50%, transparent 50%, transparent), linear-gradient(@nextdeg, @barColor 50%, @backColor 50%, @backColor);
+	}
+	.progress-@{index} when (@index > @half) {
+		@nextdeg: -90deg + (@increment * (@index - @half));
+		background-image: linear-gradient(@nextdeg, @barColor 50%, transparent 50%, transparent), linear-gradient(270deg, @barColor 50%, @backColor 50%, @backColor);
+	}
+	.loop(@loops, (@index + 1));
+}

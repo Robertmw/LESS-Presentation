@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-	$(".page-inner").onepage_scroll({
-		sectionContainer: "section" 
+	$(".page-inner-left").onepage_scroll({
+		sectionContainer: "section"
 	});
 
 	var container = $('#splitlayout');
