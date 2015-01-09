@@ -1,0 +1,11 @@
+
+.border(@a) when (@a = red) {
+    border: 1px solid #000;
+}
+  
+@text-color: red;
+  
+.header {
+    color: @text-color;
+    .border(@text-color);
+}

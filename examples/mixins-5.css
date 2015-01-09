@@ -1,0 +1,6 @@
+.container {
+  border: 1px solid #000000;
+}
+.box {
+  border: 3px dotted #ff0000;
+}

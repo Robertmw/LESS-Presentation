@@ -1,0 +1,12 @@
+.color(){
+	@color-1: #ff0000;
+	.border(@w: 2px, @s: solid, @c: #000){
+		border: @arguments;
+	}
+}
+
+.box{
+	.color();
+	background-image: @color-1;
+	.border();
+}

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$(".page-inner").onepage_scroll({
+	$(".page-inner-left").onepage_scroll({
 		sectionContainer: "section" 
 	});
 
